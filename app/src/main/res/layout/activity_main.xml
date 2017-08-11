@@ -6,13 +6,140 @@
     android:layout_height="match_parent"
     tools:context="com.project.dmitry.dicechancer.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/form_layout"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/base_number_layout"
+            android:layout_width="295dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5px"
+            android:layout_marginTop="20px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/base_number_label"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:text="Base number" />
+
+            <LinearLayout
+                android:id="@+id/base_number_value_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:="right"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/button_decrement_base_number_label"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:padding="0dp"
+                    android:text="—"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/base_number_value"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/button_increment_base_number_label"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:padding="0dp"
+                    android:text="+"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/target_number_layout"
+            android:layout_width="295dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/target_number_label"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:text="Target number" />
+
+            <LinearLayout
+                android:id="@+id/target_number_value_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:="right"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/button_decrement_target_number_label"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:padding="0dp"
+                    android:text="—"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/target_number_value"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/button_increment_target_number_label"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:padding="0dp"
+                    android:text="+"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="115dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="@string/calculate_text"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
