@@ -3,4 +3,16 @@
     <string name="decrement">-</string>
     <string name="increment">+</string>
     <string name="calculate_text">Calculate</string>
+    <string name="target_number_label_text">Target number</string>
+    <string name="base_number_text_label">Base number</string>
+    <string name="result_table_0_0">No of dice</string>
+    <string name="result_table_0_1">1</string>
+    <string name="result_table_0_2">2</string>
+    <string name="result_table_0_3">3</string>
+    <string name="result_table_0_4">4</string>
+    <string name="result_table_0_5">5</string>
+    <string name="result_table_1_0">Standard</string>
+    <string name="result_table_2_0">Drop 1 lowest</string>
+    <string name="result_table_3_0">Drop 2 lowest</string>
+    <string name="result_table_4_0">Drop 1 highest</string>
 </resources>
