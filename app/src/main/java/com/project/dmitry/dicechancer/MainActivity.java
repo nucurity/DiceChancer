@@ -10,6 +10,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     //Layout control items
@@ -25,12 +27,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Variables for calculation
     int baseNumber;
     int targetNumber;
+    ProbabilityEngine pengine;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        pengine = new ProbabilityEngine();
 
         calculateButton = (Button) findViewById(R.id.button_calculate);
         incrementBaseNumberButton = (Button) findViewById(R.id.button_increment_base_number);
@@ -64,24 +68,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == incrementBaseNumberButton.getId()) {
+            baseNumber = Integer.valueOf(baseValueEditText.getText().toString());
             baseNumber = validate(baseNumber, true);
             baseValueEditText.setText(String.valueOf(baseNumber));
         }
         else if (v.getId() == decrementBaseNumberButton.getId())
         {
+            baseNumber = Integer.valueOf(baseValueEditText.getText().toString());
             baseNumber = validate(baseNumber,false);
             baseValueEditText.setText(String.valueOf(baseNumber));
         }
         else if (v.getId() == incrementTargetNumberButton.getId())
         {
+            targetNumber = Integer.valueOf(targetValueEditText.getText().toString());
             targetNumber = validate(targetNumber,true);
             targetValueEditText.setText(String.valueOf(targetNumber));
         }
-
         else if (v.getId() == decrementTargetNumberButton.getId())
         {
+            targetNumber = Integer.valueOf(targetValueEditText.getText().toString());
             targetNumber = validate(targetNumber,false);
             targetValueEditText.setText(String.valueOf(targetNumber));
+        }
+        else if (v.getId() == calculateButton.getId())
+        {
+            baseNumber = Integer.valueOf(baseValueEditText.getText().toString());
+            targetNumber = Integer.valueOf(targetValueEditText.getText().toString());
+            int resultNumber = targetNumber - baseNumber;
+            updateResults(resultNumber);
         }
     }
 
@@ -105,7 +119,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return row.getChildAt(position % 6);
     }
 
-    public void updateResults(){
+    public void updateResults(int result){
+        double[] normalResult = pengine.fillNormal(result);
+        //new double[5];
+        //normalResult =
+//        TextView cell = (TextView) getCellAtPos(resultTable,7);
+//        cell.setText(""+normalResult[0]);
+        for(int i = 0; i<5; i++){
+            TextView cell = (TextView) getCellAtPos(resultTable,i+7);
+
+            DecimalFormat numberFormat = new DecimalFormat("#.0");
+            cell.setText(numberFormat.format(normalResult[i])+"%");
+
+        }
 
     }
 }

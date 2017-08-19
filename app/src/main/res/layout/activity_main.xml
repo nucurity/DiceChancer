@@ -160,42 +160,42 @@
                     android:text="@string/result_table_0_0"
                     android:padding="10dp"
                     android:gravity="right"
-                    android:layout_weight="2"/>
+                    android:layout_weight="1"/>
 
                 <TextView
                     android:id="@+id/result_table_0_1"
                     android:text="@string/result_table_0_1"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_0_2"
                     android:text="@string/result_table_0_2"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_0_3"
                     android:text="@string/result_table_0_3"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_0_4"
                     android:text="@string/result_table_0_4"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_0_5"
                     android:text="@string/result_table_0_5"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
             </TableRow>
 
@@ -204,39 +204,36 @@
                 <TextView
                     android:id="@+id/result_table_1_0"
                     android:text="@string/result_table_1_0"
-                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
                     android:gravity="right"
-                    android:layout_weight="2"/>
+                    android:layout_weight="1"/>
 
                 <TextView
                     android:id="@+id/result_table_1_1"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_1_2"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_1_3"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_1_4"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_1_5"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
             </TableRow>
 
@@ -245,39 +242,36 @@
                 <TextView
                     android:id="@+id/result_table_2_0"
                     android:text="@string/result_table_2_0"
-                    android:padding="10dp"
                     android:gravity="right"
-                    android:layout_weight="2"/>
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_weight="1"/>
 
                 <TextView
                     android:id="@+id/result_table_2_1"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_2_2"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_2_3"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_2_4"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_2_5"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
             </TableRow>
 
@@ -286,39 +280,36 @@
                 <TextView
                     android:id="@+id/result_table_3_0"
                     android:text="@string/result_table_3_0"
-                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
                     android:gravity="right"
-                    android:layout_weight="2"/>
+                    android:layout_weight="1"/>
 
                 <TextView
                     android:id="@+id/result_table_3_1"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_3_2"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_3_3"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_3_4"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_3_5"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
 
             </TableRow>
 
@@ -327,39 +318,41 @@
                 <TextView
                     android:id="@+id/result_table_4_0"
                     android:text="@string/result_table_4_0"
-                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
                     android:gravity="right"
-                    android:layout_weight="2"/>
+                    android:layout_weight="1"/>
 
                 <TextView
                     android:id="@+id/result_table_4_1"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_4_2"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_4_3"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_4_4"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+
+                    android:layout_weight="2"/>
 
                 <TextView
                     android:id="@+id/result_table_4_5"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:layout_weight="1"/>
+
+                    android:layout_weight="2"/>
 
             </TableRow>
 
