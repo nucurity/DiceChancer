@@ -24,18 +24,14 @@ public class ProbabilityEngine {
         loadData();
     }
 
+
+    //return array of doubles with chances to hit target number or 1,2,3,4,5 dices
     public double[] fillNormal(int target){
         double[] resultArray = new double[5];
 
-//        resultArray[0] = 1;
-//        resultArray[1] = 2;
-//        resultArray[2] = 3;
-//        resultArray[3] = 4;
-//        resultArray[4] = 5;
-
         //n1d
         if(target <= 1)
-            resultArray[0] = 1;
+            resultArray[0] = 100;
         else if(target > 6)
             resultArray[0] = 0;
         else{
@@ -47,7 +43,7 @@ public class ProbabilityEngine {
 
         //n2d
         if(target <= 2)
-            resultArray[1] = 1;
+            resultArray[1] = 100;
         else if(target > 12)
             resultArray[1] = 0;
         else{
@@ -59,7 +55,7 @@ public class ProbabilityEngine {
 
         //n3d
         if(target <= 3)
-            resultArray[2] = 1;
+            resultArray[2] = 100;
         else if(target > 18)
             resultArray[2] = 0;
         else{
@@ -71,7 +67,7 @@ public class ProbabilityEngine {
 
         //n4d
         if(target <= 4)
-            resultArray[3] = 1;
+            resultArray[3] = 100;
         else if(target > 24)
             resultArray[3] = 0;
         else{
@@ -83,7 +79,7 @@ public class ProbabilityEngine {
 
         //n5d
         if(target <= 5)
-            resultArray[4] = 1;
+            resultArray[4] = 100;
         else if(target > 30)
             resultArray[4] = 0;
         else{
@@ -188,8 +184,4 @@ public class ProbabilityEngine {
         n5d[25] = 0.001;
 
     }
-
-
-
-
 }

@@ -12,7 +12,7 @@
     <string name="result_table_0_4">4</string>
     <string name="result_table_0_5">5</string>
     <string name="result_table_1_0">Standard</string>
-    <string name="result_table_2_0">Drop 1 lowest</string>
-    <string name="result_table_3_0">Drop 2 lowest</string>
-    <string name="result_table_4_0">Drop 1 highest</string>
+    <string name="result_table_2_0">Drop 1 low</string>
+    <string name="result_table_3_0">Drop 2 low</string>
+    <string name="result_table_4_0">Drop 1 high</string>
 </resources>

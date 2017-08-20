@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int targetNumber;
     ProbabilityEngine pengine;
 
+    DecimalFormat persentFormat1 = new DecimalFormat("#.0");
+    DecimalFormat persentFormat2 = new DecimalFormat("#");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,31 +74,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             baseNumber = Integer.valueOf(baseValueEditText.getText().toString());
             baseNumber = validate(baseNumber, true);
             baseValueEditText.setText(String.valueOf(baseNumber));
-        }
-        else if (v.getId() == decrementBaseNumberButton.getId())
-        {
+        } else if (v.getId() == decrementBaseNumberButton.getId()) {
             baseNumber = Integer.valueOf(baseValueEditText.getText().toString());
-            baseNumber = validate(baseNumber,false);
+            baseNumber = validate(baseNumber, false);
             baseValueEditText.setText(String.valueOf(baseNumber));
-        }
-        else if (v.getId() == incrementTargetNumberButton.getId())
-        {
+        } else if (v.getId() == incrementTargetNumberButton.getId()) {
             targetNumber = Integer.valueOf(targetValueEditText.getText().toString());
-            targetNumber = validate(targetNumber,true);
+            targetNumber = validate(targetNumber, true);
             targetValueEditText.setText(String.valueOf(targetNumber));
-        }
-        else if (v.getId() == decrementTargetNumberButton.getId())
-        {
+        } else if (v.getId() == decrementTargetNumberButton.getId()) {
             targetNumber = Integer.valueOf(targetValueEditText.getText().toString());
-            targetNumber = validate(targetNumber,false);
+            targetNumber = validate(targetNumber, false);
             targetValueEditText.setText(String.valueOf(targetNumber));
-        }
-        else if (v.getId() == calculateButton.getId())
-        {
-            baseNumber = Integer.valueOf(baseValueEditText.getText().toString());
-            targetNumber = Integer.valueOf(targetValueEditText.getText().toString());
+        } else if (v.getId() == calculateButton.getId()) {
+            if (!baseValueEditText.getText().toString().equals("")){
+                baseNumber = Integer.valueOf(baseValueEditText.getText().toString());
+            }
+            if (!targetValueEditText.getText().toString().equals("")){
+                targetNumber = Integer.valueOf(targetValueEditText.getText().toString());
+            }
             int resultNumber = targetNumber - baseNumber;
             updateResults(resultNumber);
+
         }
     }
 
@@ -105,8 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (operation) {
             if (number < 99)
                 number++;
-        }
-        else {
+        } else {
             if (number > 0)
                 number--;
         }
@@ -119,17 +118,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return row.getChildAt(position % 6);
     }
 
-    public void updateResults(int result){
+    public void updateResults(int result) {
         double[] normalResult = pengine.fillNormal(result);
         //new double[5];
         //normalResult =
 //        TextView cell = (TextView) getCellAtPos(resultTable,7);
 //        cell.setText(""+normalResult[0]);
-        for(int i = 0; i<5; i++){
-            TextView cell = (TextView) getCellAtPos(resultTable,i+7);
+        for (int i = 0; i < 5; i++) {
+            TextView cell = (TextView) getCellAtPos(resultTable, i + 7);
 
-            DecimalFormat numberFormat = new DecimalFormat("#.0");
-            cell.setText(numberFormat.format(normalResult[i])+"%");
+
+            if (normalResult[i] == 0 || normalResult[i] == 100)
+                cell.setText(persentFormat2.format(normalResult[i]) + "%");
+            else
+                cell.setText(persentFormat1.format(normalResult[i]) + "%");
 
         }
 
